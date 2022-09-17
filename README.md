@@ -1,8 +1,12 @@
 # HSIR-Matlab
 
+![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fbit-isp%2FHSIR-Matlab&countColor=%23263759&style=flat)
+
+🚧 *Under Construction*
+
+
 Collections of Hyperspectral Image Restoration Algorithms in Matlab
 
-> Under Construction
 
 ## Usage
 
@@ -86,4 +90,3 @@ If you find this repo helpful, please considering citing us.
 
 ```
 
-![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fbit-isp%2FHSIR-Matlab&countColor=%23263759&style=flat)
