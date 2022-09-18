@@ -2,7 +2,6 @@ addpath('NGmeet');
 addpath('assess_fold');
 addpath('../utils');
 
-sigma = 50.0/255;
 dir_path = '../../data/icvl_512_50/';
 save_dir = '../../results/NGmeet/icvl_512_50/';
 files = dir([dir_path, '*.mat']);
@@ -25,17 +24,18 @@ for i = 1:len
     name = file.name;
     [p, f, e] = fileparts(name);
     full_path = [dir_path, name];
-    load(full_path);
+    load(full_path); % input, gt, sigma
     fprintf("[%d|%d]: process %s\n", i, len, name)
 
     [H W C] = size(gt);
+    sigma = sigma/255;
 
     % ==== run ====
 
     tic
 
     Par = ParSetH(255 * sigma, C);
-    [output] = NGmeet_DeNoising(255 * input, 255 * gt, Par); %NGmeet denoisng function
+    [output] = NGmeet_DeNoising(255 * input, 255 * gt, Par); 
     output = output / 255;
 
     runtime = toc;

@@ -12,7 +12,7 @@ sigma = 50.0/255;
 tic
 
 Par = ParSetH(255 * sigma, C);
-[output] = NGmeet_DeNoising(255 * input, 255 * gt, Par); %NGmeet denoisng function
+[output] = NGmeet_DeNoising(255 * input, 255 * gt, Par); 
 output = output / 255;
 
 runtime = toc;
