@@ -12,7 +12,7 @@ mkdir(save_dir, 'gray')
 fileID = fopen([save_dir, 'log.json'], 'w');
 
 fprintf(fileID, '{\n');
-fprintf(fileID, '"details": {\n');
+fprintf(fileID, '"detail": {\n');
 
 total_psnr = 0;
 total_ssim = 0;
