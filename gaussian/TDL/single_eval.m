@@ -1,5 +1,5 @@
-addpath(genpath('TDL'));
-addpath(genpath('../../utils'));
+addpath(genpath('tensor_dl'));
+addpath(genpath('../../lib'));
 
 load('../../data/icvl_512_50/bulb_0822-0909.mat')
 

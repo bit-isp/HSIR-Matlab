@@ -1,5 +1,5 @@
-addpath(genpath('TDL'));
-addpath(genpath('../../utils'));
+addpath(genpath('tensor_dl'));
+addpath(genpath('../../lib'));
 
 dir_path = '../../data/icvl_512_50/';
 save_dir = '../../results/TDL/icvl_512_50/';
