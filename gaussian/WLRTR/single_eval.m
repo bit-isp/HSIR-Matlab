@@ -1,5 +1,7 @@
 addpath('LRTR_Denoising');
-addpath(genpath('../../utils'));
+addpath(genpath('tptool'));
+addpath(genpath('assesment'));
+addpath(genpath('../../lib'));
 
 load('../../data/icvl_512_50/bulb_0822-0909.mat')
 
@@ -10,7 +12,7 @@ sigma = 50.0/255;
 
 tic
 
-Par = ParSet(sigma);
+Par = ParSet(sigma*255);
 [output] = LRTR_DeNoising(input*255, gt*255, Par); %LRTA denoisng function
 output = output / 255;
 

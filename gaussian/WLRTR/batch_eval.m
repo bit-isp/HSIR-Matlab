@@ -1,5 +1,7 @@
 addpath('LRTR_Denoising');
-addpath(genpath('../../utils'));
+addpath(genpath('tptool'));
+addpath(genpath('assesment'));
+addpath(genpath('../../lib'));
 
 dir_path = '../../data/icvl_512_50/';
 save_dir = '../../results/WLRTR/icvl_512_50/';
@@ -33,7 +35,7 @@ for i = 1:len
 
     tic
 
-    Par = ParSet(sigma);
+    Par = ParSet(sigma*255);
     [output] = LRTR_DeNoising(input*255, gt*255, Par); %LRTA denoisng function
     output = output / 255;
     
