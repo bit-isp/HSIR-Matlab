@@ -10,9 +10,12 @@ Collections of Hyperspectral Image Restoration Algorithms in Matlab
 
 ## Usage
 
+1. `cd` into task directory, e.g., `gaussian/BM4D`.
+2. Launch `Matlab` .
+
 ```matlab
-addpath(genpath('lib'));
-demo_fun(noisy_hsi, sigma_ratio, 'BM4D')
+single_eval
+batch_eval
 ```
 
 ## Supported Methods
@@ -21,38 +24,30 @@ demo_fun(noisy_hsi, sigma_ratio, 'BM4D')
   <tbody>
     <tr align="center" valign="bottom">
       <td>
-        <b>Tensor based</b>
+        <b>Gaussian Denoising</b>
       </td>
       <td>
-        <b>Low Rank based</b>
-      </td>
-      <td>
-        <b>Others</b>
+        <b>Complex Denoising</b>
       </td>
     </tr>
     <tr valign="top">
       <td>
         <ul>
-            <li><a href="https://github.com/qzhang95/HSID-CNN">BM3D </a></li>
-            <li><a href="https://github.com/Vandermode/QRNN3D">BM4D </a></li>
-            <li><a href="https://github.com/inria-thoth/T3SC">FastHyDe</a></li>
-            <li><a href="https://github.com/Zeqiang-Lai/DPHSIR">GLF</a></li>
+            <li><a href="">BM4D </a></li>
+            <li><a href="">ITSReg </a></li>
+            <li><a href="">KBR</a></li>
+            <li><a href="">LLRT</a></li>
+            <li><a href="">NGmeet</a></li>
+            <li><a href="">TDL</a></li>
+            <li><a href="">WLRTR</a></li>
       </ul>
       </td>
       <td>
         <ul>
-          <li><a href="#">LLRGTV</a></li>
-          <li><a href="#">LLRT</a></li>
-          <li><a href="#">WLTRT</a></li>
-          <li><a href="#">LRTDTV</a></li>
+          <li><a href="#">LRMR</a></li>
           <li><a href="#">LRTV</a></li>
-        </ul>
-      </td>
-      <td>
-        <ul>
-          <li><a href="#">NGmeet</a></li>
           <li><a href="#">NMoG</a></li>
-          <li><a href="#">KBR</a></li>
+          <li><a href="#">TDTV</a></li>
         </ul>
       </td>
     </tr>
