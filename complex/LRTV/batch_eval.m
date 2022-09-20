@@ -31,7 +31,8 @@ for i = 1:len
     % ==== run ====
 
     tic
-
+    
+    hsi_sz = size(input);
     if size(input, 3) > 100
         tau = 0.015;
         lambda = 20 / sqrt(hsi_sz(1) * hsi_sz(2));

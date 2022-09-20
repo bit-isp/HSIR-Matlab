@@ -1,15 +1,15 @@
 addpath(genpath('LRTV'));
 addpath(genpath('../../lib'));
 
-load('../../data/icvl_512_stripe/bulb_0822-0909.mat')
+load('../../data/icvl_512_stripe/bulb_0822-0903.mat')
 
 [H W C] = size(gt);
-sigma = 50.0/255;
 
 % ==== run ====
 
 tic
 
+hsi_sz = size(input);
 if size(input, 3) > 100
     tau = 0.015;
     lambda = 20 / sqrt(hsi_sz(1) * hsi_sz(2));

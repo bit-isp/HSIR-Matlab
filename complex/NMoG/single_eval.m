@@ -1,7 +1,7 @@
 addpath(genpath('NMoG'));
 addpath(genpath('../../lib'));
 
-load('../../data/icvl_512_stripe/bulb_0822-0909.mat')
+load('../../data/icvl_512_stripe/bulb_0822-0903.mat')
 
 [H W C] = size(gt);
 
@@ -41,4 +41,4 @@ imwrite(hsi2rgb(gt), 'gt_color.png');
 imwrite(output(:, :, 20), 'gray.png');
 imwrite(hsi2rgb(output), 'color.png');
 
-fprintf('[BM4D] MPSNR=%5.4f MSSIM=%5.4f SAM=%5.4f Time=%5.4f\n', psnr, ssim, sam, runtime)
+fprintf('[NMoG] MPSNR=%5.4f MSSIM=%5.4f SAM=%5.4f Time=%5.4f\n', psnr, ssim, sam, runtime)

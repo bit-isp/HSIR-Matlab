@@ -1,7 +1,7 @@
-addpath(genpath('TDTV'));
+addpath(genpath('LRTDTV'));
 addpath(genpath('../../lib'));
 
-load('../../data/icvl_512_stripe/bulb_0822-0909.mat')
+load('../../data/icvl_512_stripe/bulb_0822-0903.mat')
 
 [H W C] = size(gt);
 sigma = 50.0/255;
@@ -10,6 +10,7 @@ sigma = 50.0/255;
 
 tic
 
+hsi_sz = size(input);
 if size(input, 3) > 100
     output = LRTDTV(input, 1, 10, [ceil(0.8 * hsi_sz(1)), ceil(0.8 * hsi_sz(2)), 10]);
 else

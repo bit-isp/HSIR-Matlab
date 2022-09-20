@@ -1,4 +1,4 @@
-addpath(genpath('TDTV'));
+addpath(genpath('LRTDTV'));
 addpath(genpath('../../lib'));
 
 dir_path = '../../data/icvl_512_stripe/';
@@ -33,6 +33,7 @@ for i = 1:len
 
     tic
 
+    hsi_sz = size(input);
     if size(input, 3) > 100
         output = LRTDTV(input, 1, 10, [ceil(0.8 * hsi_sz(1)), ceil(0.8 * hsi_sz(2)), 10]);
     else
